@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Teko&display=swap');
+
+/* globals/general */
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333339;
+  background: #eef6fb;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.temp {
+  font-family: 'Teko', sans-serif;
+}
+
+/* header*/
+
+.appHeader {
+  max-width: 940px;
+  height: auto;
+  margin: 0 auto;
+  padding: 90px 0;
+  display: flex;
+}
+
+.appHeader div {
+  width: 33%;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  float: left;
+  cursor: pointer;
+}
+
+.appHeader div:hover {
+  color: #5fb0e8;
+  font-weight: 500;
+}
+
+.appHeader div.selected {
+  color: #5fb0e8;
+  font-weight: 500;
+}
+
+/* forecast container */
+
+.forecastBlock {
+  width: 1280px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.forecastBlock ul {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  border: 8px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  float: left;
+}
+
+.forecastBlock ul li {
+  text-align: center;
+  float: left;
+}
+
+/* todays weather panel */
+
+time {
+  width: 100%;
+  display: block;
+}
+
+.forecastBlock ul li.todaysWeather {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 120px;
+  font-size: 50px;
+  border-bottom: 8px solid #fff;
+}
+
+.forecastBlock ul li.todaysWeather .temp {
+  font-size: 140px;
+  line-height: 120px;
+}
+
+.forecastBlock ul li.todaysWeather .leftContent {
+  width: 50%;
+  text-align: right;
+  float: left;
+}
+
+.forecastBlock ul li.todaysWeather .leftContent img {
+  transform: rotateY(0deg);
+  animation: rotateAnimation 4s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.forecastBlock ul li.todaysWeather .rightContent {
+  width: 50%;
+  padding-top: 40px;
+  text-align: left;
+  float: left;
+}
+
+/* future weather panels */
+
+.forecastBlock ul li.futureWeather {
+  width: 25%;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  font-size: 40px;
+  line-height: 30px;
+  border-right: 8px solid #fff;
+}
+
+.forecastBlock ul li.futureWeather:nth-last-of-type(1) {
+  border-right: none;
+}
+
+.forecastBlock ul li.futureWeather .temp {
+  font-size: 55px;
+  line-height: 40px;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 900px) {
+  .appHeader {
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+  }
+
+  .appHeader div {
+    width: 100%;
+    margin: 20px 0;
+    line-height: 50px;
+  }
+
+  .forecastBlock {
+    max-width: 90%;
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .forecastBlock ul li.todaysWeather {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
+
+  .forecastBlock ul li.todaysWeather img {
+    max-width: 140px;
+  }
+
+  .forecastBlock ul li.todaysWeather .temp {
+    font-size: 100px;
+    line-height: 80px;
+  }
+
+  .forecastBlock ul li.futureWeather {
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    font-size: 40px;
+    line-height: 30px;
+    border-right: none;
+    border-bottom: 8px solid #fff;
+  }
+
+  .forecastBlock ul li.futureWeather img {
+    max-width: 100px;
+  }
+
+  .forecastBlock ul li.futureWeather:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+}
