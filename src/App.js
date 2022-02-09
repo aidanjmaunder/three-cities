@@ -42,13 +42,13 @@ function App() {
         </div>
         <div
           onClick={() => {
-            setLat('55.751244')
-            setLong('37.618423')
+            setLat('34.052235')
+            setLong('-118.243683')
             setCity(1)
           }}
           className={selectedCity !== 1 ? '' : 'selected'}
         >
-          Moscow
+          Los Angeles
         </div>
         <div
           onClick={() => {
