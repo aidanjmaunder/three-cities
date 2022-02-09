@@ -21,6 +21,7 @@ function App() {
   }, [lat, long])
 
   const calendarStrings = {
+    lastDay: '[Today]',
     sameDay: '[Today]',
     nextDay: 'ddd',
     nextWeek: 'ddd',
