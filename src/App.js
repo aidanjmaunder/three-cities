@@ -21,7 +21,6 @@ function App() {
   }, [lat, long])
 
   const calendarStrings = {
-    lastDay: '[Today]',
     sameDay: '[Today]',
     nextDay: 'ddd',
     nextWeek: 'ddd',
@@ -53,13 +52,13 @@ function App() {
         </div>
         <div
           onClick={() => {
-            setLat('35.652832')
-            setLong('139.839478')
+            setLat('51.509865')
+            setLong('-0.118092')
             setCity(2)
           }}
           className={selectedCity !== 2 ? '' : 'selected'}
         >
-          Tokyo
+          London
         </div>
       </header>
       {/* conditional render */}
